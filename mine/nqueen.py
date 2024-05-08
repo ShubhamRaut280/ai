@@ -11,8 +11,11 @@ def main():
 	else : 
 		print('Solution does not exist!')
 
+# [0,0,0,0]
+# [0,0,0,0]
+# [0,0,0,0]
+# [0,0,0,0]
 
-	
 
 def solve(board, row, n):
 	if row>=n: 

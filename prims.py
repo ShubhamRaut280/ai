@@ -55,3 +55,35 @@ for src, dest, weight in minimum_spanning_tree:
     print(src, "-->", dest, ": ", weight)
 
 print("Total Cost:", total_cost)
+
+
+
+
+
+
+
+
+
+
+
+
+# def kruskal(edges, num_vertices):
+#     edges.sort(key=lambda x: x[2])
+#     mst = []
+#     sets = [{i} for i in range(num_vertices)]
+
+#     def find_set(vertex):
+#         for s in sets:
+#             if vertex in s:
+#                 return s
+
+#     for u, v, w in edges:
+#         u_set = find_set(u)
+#         v_set = find_set(v)
+#         if u_set != v_set:
+#             mst.append([u, v, w])
+#             sets.remove(u_set)
+#             sets.remove(v_set)
+#             sets.append(u_set.union(v_set))
+
+#     return mst

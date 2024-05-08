@@ -84,3 +84,74 @@ if path:
     print("Path:", " -> ".join(path))
 else:
     print("No path found from", start, "to", goal)
+
+
+
+
+
+# import heapq
+
+# def astar(start, goal, graph, heuristic):
+#     # Priority queue to store nodes with their total cost
+#     pq = [(0, start)]
+#     visited = set()
+#     came_from = {}
+
+#     while pq:
+#         total_cost, current_node = heapq.heappop(pq)
+
+#         if current_node == goal:
+#             path = []
+#             while current_node != start:
+#                 path.append(current_node)
+#                 current_node = came_from[current_node]
+#             path.append(start)
+#             path.reverse()
+#             return path
+
+#         if current_node in visited:
+#             continue
+
+#         visited.add(current_node)
+
+#         for neighbor in graph[current_node]:
+#             if neighbor not in visited:
+#                 came_from[neighbor] = current_node
+#                 heapq.heappush(pq, (total_cost + heuristic[neighbor], neighbor))
+
+#     return None  # Goal not reachable
+
+# # Define the graph as a dictionary where the keys are nodes (alphabets) and the values are lists of neighbors.
+# graph = {
+#     'A': ['B', 'C'],
+#     'B': ['A', 'D', 'E'],
+#     'C': ['A', 'F'],
+#     'D': ['B', 'G'],
+#     'E': ['B', 'H'],
+#     'F': ['C', 'I'],
+#     'G': ['D', 'H'],
+#     'H': ['E', 'G', 'I'],
+#     'I': ['F', 'H']
+# }
+
+# start = 'A'
+# goal = 'I'
+
+# heuristic = {
+#     'A': 5,
+#     'B': 4,
+#     'C': 3,
+#     'D': 2,
+#     'E': 3,
+#     'F': 2,
+#     'G': 1,
+#     'H': 2,
+#     'I': 0
+# }
+
+# path = astar(start, goal, graph, heuristic)
+# if path:
+#     print("Path found from", start, "to", goal)
+#     print("Path:", " -> ".join(path))
+# else:
+#     print("No path found from", start, "to", goal)
